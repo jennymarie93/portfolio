@@ -152,8 +152,7 @@ a {
 
 a:hover {
     color:rgb(162, 52, 96);
-    text-decoration: underline;
-    text-decoration-color: rgba(82, 83, 83, 0.4);
+    text-decoration: none;
 }
 
 /* HELPER CLASSES */
@@ -205,17 +204,48 @@ form input[type="submit"]:hover {
     text-decoration: none;
 }
 
-.button.alt {
-    background-color: transparent;
-    border-color:rgba(155, 184, 106, 1);
-    color:rgba(155, 184, 106, 1);
+.button.alt,
+.button.alt a {
+    background-color: rgb(0, 0, 0);
+    border-color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: bicyclette, sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
-.button.alt:hover {
-    background-color:  rgba(141, 185, 185, 1);
-    border-color: rgba(141, 185, 185, 1);
-    color: rgba(255,255,255,1);
+.button.alt a:hover {
+    color:rgb(233, 255, 195);
     text-decoration: none;
+    background-color:  rgba(26, 26, 26, 0.795);
+    border-color: rgba(26, 26, 26, 0.795);
+}
+
+.crime,
+.crime:hover {
+    font-family: trumpgothicpro, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 3px;
+    color:#060606;
+    background-color: white;
+    box-sizing: border-box;
+    font-size: inherit;
+    line-height: 1;
+    border: none;
+    padding: 1em;
+    display: block;
+    margin: auto;
+    text-align: center;
+    border-radius: 0.5em;
+    max-width: 9em;
+    cursor: pointer;
+}
+
+img .pic {
+        max-width: 100%;
+        height: auto;
 }
 
 /* LAYOUT */
@@ -467,11 +497,14 @@ section {
 .site-header a,
 .site-footer a {
     color:rgba(0, 0, 0, .8);
+    font-family: arno-pro-display, serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .site-header a:hover,
 .site-footer a:hover {
-    color: rgba(141, 185, 185, 1);
+    color: rgb(204, 39, 88);
     text-decoration: none;
     cursor: default;
 }
@@ -583,6 +616,11 @@ section {
     max-width: 400px;
 }
 
+.hero2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 /* TOGGLE NAV */
 
 @media (max-width: 767px) {
@@ -602,14 +640,14 @@ section {
         border: 1px solid black;
     }
     .toggle-nav .site-nav .menu-button::selection {
-        background-color: rgba(255,255,255,0);
+        background-color: rgba(255, 255, 255, 0.747);
     }
     .toggle-nav .site-nav ul {
         display: block;
         text-align: center;
     }
     .toggle-nav .site-nav a:hover {
-        background-color: rgba(175, 215, 215, 1);
+        background-color: rgb(204, 39, 88);
         color:white;
     }
     .toggle-nav[data-navstate="closed"] ul {
@@ -657,8 +695,9 @@ section {
 /* CUSTOM SITE CSS */
 
 .dark {
-    color:rgba(0, 0, 0, .8)
+    color:rgba(0, 0, 0, .8);
 }
+
 
 
 .section-title {
@@ -674,13 +713,19 @@ section {
     border: .75px solid rgba(0, 0, 0, .2)
 }
 
-#about {
-    background-color:rgba(246, 246, 246, 0.8);
+#la-perla,
+#mex-city,
+#trilogy {
+    background-color:rgba(246, 246, 246, 0.9);
 }
 
-#contact {
-    background:rgba(0, 0, 0, 0);
-}
+/* .mockup {
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    max-width: 500px;
+    max-height: 500px;
+} */
 
 /* STICKY header - works with a class="sticky" on .site-header */
 
@@ -692,9 +737,21 @@ section {
     background-color: transparent;
   }
   
-  .site-header.sticky + .site-main {
-    padding-top: 3em;
+.sub {
+    background-color:  rgba(255, 255, 255, 0.95);
+    font-size: inherit;
+    line-height: 1;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0;
+    /* display: block; */
+    margin: 2px auto;
+    text-align: center;
+    /* border-radius: 0.5em; */
+    max-width: 8em;
+    max-height: 3em;
   }
+
 
   @media (min-height: 600px) {
       #contact {
@@ -702,3 +759,27 @@ section {
       }
   }
 
+/* VIDEO */
+
+video {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .video {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 1em;
+  }
+  
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
