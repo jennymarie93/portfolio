@@ -51,7 +51,8 @@ h1 {
     font-size: 3em; 
     /* 48px: 48/16 = 3em */
     line-height: 1;
-    font-family: bilo, sans-serif;font-weight: 300;
+    font-family: bilo, sans-serif;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -476,6 +477,8 @@ section {
 .site-header .a {
     font-size: 1.15em;
     line-height: 1.25;
+    font-family: bilo, sans-serif;
+    font-weight: 300;
 }
 
 .site-header .b {
@@ -719,13 +722,20 @@ section {
     background-color:rgba(246, 246, 246, 0.9);
 }
 
-/* .mockup {
-    margin: auto;
+.title {
+    color: rgba(255, 255, 255, 1);
+    font-family: arno-pro-display, serif;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 5px;
     align-items: center;
-    align-content: center;
-    max-width: 500px;
-    max-height: 500px;
-} */
+    margin: auto;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: .65em;
+    font-size: 5em;
+}
 
 /* STICKY header - works with a class="sticky" on .site-header */
 
