@@ -31,7 +31,9 @@
 /* TYPOGRAPHY */
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: basic-sans, Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-style: normal;
     font-size: 87.5%; 
     /* 14px = 1em */
     color: rgba(0,0,0,.8);
@@ -44,7 +46,7 @@ body {
     48, 36, 24, 21, 18, 16 */
 
 h1, h2, h3, h4, h5, h6 {
-    margin: .5em 0;
+    margin: 1em 0 0 0;
 }
 
 h1 {
@@ -80,26 +82,15 @@ h5 {
     font-size: 1.125em; 
     /* 18px: 18/16 = 1.125em */
     line-height: 1.4;
+    font-family: arno-pro-display, serif;
+    font-weight:200;
+    color: rgb(179, 136, 149);
 }
 
 h6 {
     font-size: 1em; 
     /* 16px: 16/16 = 1em */
     line-height: 1.5;
-}
-
-/* CUSTOM TYPOGRAPHY */
-
-.caption {
-    font-size: 1.5em;
-    margin: 0 auto;
-    padding: 1em 0 0.5em 0;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    text-align: center;
-    font-weight: normal;
-    color: #777;
-    display: inline-block;
 }
 
 /* PARAGRAPHS */
@@ -120,28 +111,6 @@ strong {
 
 em {
     font-style: italic;
-}
-
-/* #BLOCK QUOTES  */
-
-blockquote {
-    font-size: 1.14em;
-    line-height: 1.3;
-    margin: 1.5em 0;
-    padding: 1.5em;
-    max-width: 38em;
-}
-  
-  blockquote cite {
-    display: block;
-    opacity: 0.8;
-    font-size: .85em;
-}
-  
-  blockquote cite:before {
-    content: "—";
-    font-size: .8em;
-    margin-right: 0.25em;
 }
 
 /* LINKS */
@@ -181,17 +150,18 @@ img {
 .button,
 button,
 form input[type="submit"] {
-    font-size: inherit;
-    font-family: arno-pro-display, serif;
-    line-height: 1;
-    background-color: rgba(155, 184, 106, .5);
-    border: 1px solid rgba(155, 184, 106, .5);
-    color: rgba(255,255,255,1);
-    padding: 1em;
     display: inline-block;
-    margin: 0.5em 0.5em 0.5em 0;
-    text-align: center;
-    border-radius: 0.5em;
+    background-color: rgb(228, 147, 172);
+    border: 1px solid rgb(228, 147, 172);
+    color: #fff;
+    padding: 0.75em 1em;
+    border-radius: 0.75em;
+    margin: 0.5em 0;
+    border: none;
+    cursor: pointer;
+    line-height: 1em;
+    text-decoration: none;
+    font-family: bicyclette, sans-serif;
 }
 
 .button:hover,
@@ -199,10 +169,12 @@ button:hover,
 form input[type="submit"]:hover {
     font-size: inherit;
     line-height: 1;
-    background-color:  rgba(155, 184, 106, .7);
-    border-color: rgba(155, 184, 106, .7);
+    background-color:  rgba(83, 53, 63, 0.85);
+    border-color: rgba(83, 53, 63, 0.85);
     color: rgba(255,255,255,1);
     text-decoration: none;
+    border-radius: 0.5em;
+    font-style: italic;
 }
 
 .button.alt,
@@ -269,13 +241,6 @@ body {
     padding: 0 4%;
 }
 
-.book:hover {
-    background-image: url(../img/1x/Asset\ 4.png);
-    background-size:300px ;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 /* MEDIA QUERIES */
 
 @media (max-width: 767px) {
@@ -285,19 +250,6 @@ body {
         background-position: 50% 40%;
         background-size: 450px;
     }
-    .book:hover {
-        animation-name: grow1;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-    }
-
-    @keyframes grow1 {
-    0% {background-size: 250px;}
-  25% {background-size: 300px;}
-  50% {background-size: 350px;}
-  75% {background-size: 300px;}
-  100% {background-size: 250px;}
-      } 
 }
 
 @media (min-width: 768px) {
@@ -425,6 +377,7 @@ body.demo::before {
     .row > .column.centered {
         margin-left: auto;
         margin-right: auto;
+        margin: auto;
     }
 }
 
@@ -471,19 +424,24 @@ section {
 /* SITE HEADER */
 .site-header {
     padding: 1em 0;
-    background: rgba(255,255,255, 0);
+    background-color: rgba( 255, 255, 255, 0);
 }
 
 .site-header .a {
     font-size: 1.15em;
-    line-height: 1.25;
     font-family: bilo, sans-serif;
     font-weight: 300;
+}
+
+.site-header .sub {
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .site-header .b {
     font-size: 1em;
 }
+
 
 
 /* ON LARGER SCREENS PLACE LOGO LEFT & NAV RIGHT */
@@ -515,7 +473,7 @@ section {
 /* LOGO AREA */
 
 .site-id h1 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     margin: 0;
     text-align: center;
 }
@@ -544,49 +502,38 @@ section {
     padding: 3em 0;
 }
 
-/* .site-main {
+.site-main {
         background-image: url(../img/1x/Asset\ 3.png);
         background-repeat: no-repeat;
-        background-position: 50% 2%;
-        background-size: 450px;
-} */
-
-.site-main2 {
-        background-position: top center;
-        background-size: 100%;
-        background: linear-gradient(-45deg, #fffefe,#fffefe, #f59191, #ffcb8f,  #fff2b3, #e8ffb4, #cdf5ff, #e9e5f0, #6a708e, #2c1854, #060606,  #060606);
-        background-size: 400% 400%;
-        animation: gradient 30s ease infinite;
-    }
-    
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-        }
+        background-position: 50% 20%;
+        background-size: 500px;
 }
+
+
 
 /* HERO */
 
 .hero {
-    background-color: rgba(141, 185, 185, 0) ;
+    background-color: rgba(141, 185, 185, 0);
     text-align: center;
-    color: rgb(245, 239, 239);
-    padding: 9em 1em;
+    color: rgb(72, 71, 71);
+    padding: 1em;
+    margin-top: 3em;
 }
 
-.hero h1, p {
+.hero-home h1 {
+    padding-top: 1.5em;
+    text-align: center;
+    margin: 0;
+}
+
+.hero h1, .hero p {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.hero h1 {
+.hero h1, .hero-home h1 {
     color: white;
     line-height: .6;
     font-size: 5em;
@@ -598,6 +545,35 @@ section {
     font-weight: 300;
     color: white;
     font-size: 4.5em;
+}
+
+.hero-home .b {
+    font-weight: 300;
+    color: white;
+    font-size: 4em;
+    padding-top: 40px;
+    margin-top: 0;
+    padding-bottom: 30px;
+}
+
+hero-home {
+    min-height: 900px;
+}
+
+.hero-home ul {
+    margin: 0 0 100px 0;
+    padding: 1em;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-home li {
+    padding: 0 5px 0 5px;
+}
+
+.site-main .home {
+    background-color: transparent;
 }
 
 .hero.full-width {
@@ -621,8 +597,10 @@ section {
 
 .hero2 {
     margin-top: 0;
-    padding-top: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
 }
+
 
 /* TOGGLE NAV */
 
@@ -643,7 +621,7 @@ section {
         border: 1px solid black;
     }
     .toggle-nav .site-nav .menu-button::selection {
-        background-color: rgba(255, 255, 255, 0.747);
+        background-color: rgba(255, 255, 255, 1);
     }
     .toggle-nav .site-nav ul {
         display: block;
@@ -665,7 +643,7 @@ section {
     /* NAVICON */
     .toggle-nav .site-nav .menu-button.navicon {
         border: none;
-        color: rgba(255,255,255,0);
+        color: rgba(255,255,255,1);
         padding: 0;
     }
     .toggle-nav .site-nav .menu-button.navicon::after {
@@ -694,6 +672,14 @@ section {
     font-style: normal;
 }
 
+.on-page {
+    background-color: rgb(227, 207, 213);
+    color: rgba( 255, 255, 255, 1);
+    padding: 0.05em .05em;
+    border-radius: 0.75em;
+    margin-bottom: 1em;
+}
+
 
 /* CUSTOM SITE CSS */
 
@@ -719,11 +705,11 @@ section {
 #la-perla,
 #mex-city,
 #trilogy {
-    background-color:rgba(246, 246, 246, 0.9);
+    background-color:rgba(255, 255, 255, 1);
 }
 
 .title {
-    color: rgba(255, 255, 255, 1);
+    color: rgb(66, 66, 66);
     font-family: arno-pro-display, serif;
     font-weight: 300;
     font-style: normal;
@@ -742,16 +728,15 @@ section {
 .site-header.sticky {
     position: fixed;
     width: 100%;
-    top: 0;
+    margin-top: 0;
     z-index: 100;
-    background-color: transparent;
+    background-color: rgba (255,255,255,1)
   }
   
 .sub {
-    background-color:  rgba(255, 255, 255, 0.95);
+    background-color:  rgba(255, 255, 255, 0);
     font-size: inherit;
     line-height: 1;
-    border: 1px solid rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     padding: 0;
     /* display: block; */
@@ -760,6 +745,38 @@ section {
     /* border-radius: 0.5em; */
     max-width: 8em;
     max-height: 3em;
+    text-overflow: ellipsis;
+  }
+
+.sub:hover {
+    background-color: rgba(227, 207, 213, 1);
+    border-radius: .75em;
+  }
+
+  .mc:hover {
+    background-color: rgba(227, 207, 213, 1);
+    border-radius: .75em;
+    padding-bottom: 11px;
+  }
+
+  .about {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .about img {
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    padding-top: 1em;
+  }
+
+  .center {
+    max-width: 500px;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    padding-top: .5em;
+    font-size: 1.5em;
   }
 
 
