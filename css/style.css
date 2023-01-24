@@ -243,33 +243,10 @@ body {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 767px) {
-    .site-main {
-        background-image: url(../img/1x/Asset\ 3.png);
-        background-repeat: no-repeat;
-        background-position: 50% 40%;
-        background-size: 450px;
-    }
-}
-
-@media (min-width: 768px) {
-/* TABLET-SIZED STYLING GOES HERE */
-    .site-main {
-        background-image: url(../img/1x/Asset\ 3.png);
-        background-repeat: no-repeat;
-        background-position: 50% 40%;
-        background-size: 500px;
-    }
-}
-
 @media (min-width: 1050px) {
     body {
         font-size: 100%; /* 16px */ 
       }
-      .site-main {
-        background-position: 50% 40%;
-        background-size: 550px;
-    }
 }
 
 @media (min-width: 1250px) {
@@ -278,10 +255,6 @@ body {
       }
     .container {
         max-width: 1200px;
-    }
-    .site-main {
-        background-position: 50% 40%;
-        background-size: 600;
     }
 }
 
@@ -424,7 +397,7 @@ section {
 /* SITE HEADER */
 .site-header {
     padding: 1em 0;
-    background-color: rgba( 255, 255, 255, 0);
+    background-color: rgba( 255, 255, 255, .8);
 }
 
 .site-header .a {
@@ -503,10 +476,7 @@ section {
 }
 
 .site-main {
-        background-image: url(../img/1x/Asset\ 3.png);
-        background-repeat: no-repeat;
-        background-position: 50% 20%;
-        background-size: 500px;
+    margin-top: 0;
 }
 
 
@@ -517,14 +487,14 @@ section {
     background-color: rgba(141, 185, 185, 0);
     text-align: center;
     color: rgb(72, 71, 71);
-    padding: 1em;
-    margin-top: 3em;
+    padding: 5em 0 0 0;
+    margin-bottom: 0;
 }
 
 .hero-home h1 {
     padding-top: 1.5em;
     text-align: center;
-    margin: 0;
+    margin: 5em 0;
 }
 
 .hero h1, .hero p {
